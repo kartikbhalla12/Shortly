@@ -1,0 +1,135 @@
+import * as React from 'react';
+import styled from 'styled-components';
+
+export interface StatisticsProps {}
+
+const StatisticsWrapper = styled.section`
+	padding: 6rem 5rem;
+	background-color: #eff0f6;
+	text-align: center;
+`;
+
+const MainHeading = styled.h1`
+	color: #3b3054;
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+`;
+
+const SubHeading = styled.h4`
+	color: #939398;
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin-top: 0rem;
+`;
+const StatsWrapper = styled.div`
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 6rem;
+`;
+
+const StatsBox = styled.div`
+	position: relative;
+	text-align: left;
+	background-color: white;
+	padding: 2rem;
+	border-radius: 5px;
+	margin: 0 1rem;
+	box-shadow: 0 1px 30px rgba(0, 0, 0, 0.12);
+	width: 18%;
+	height: fit-content;
+
+	&#second {
+		margin-top: 3rem;
+	}
+
+	&#third {
+		margin-top: 6rem;
+	}
+
+	h4 {
+		margin-top: 2.5rem;
+		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.7rem;
+		color: #939398;
+	}
+`;
+
+const ImageWrapper = styled.div`
+	position: absolute;
+	width: 6rem;
+	height: 6rem;
+	background-color: #3b3054;
+	border-radius: 50%;
+	top: -3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		width: 2.5rem;
+	}
+`;
+
+const Line = styled.div`
+	position: absolute;
+	top: 45%;
+	width: 50%;
+	height: 0.5rem;
+	background-color: #2acfcf;
+`;
+
+const Statistics: React.FC<StatisticsProps> = () => {
+	return (
+		<StatisticsWrapper>
+			<MainHeading>Advanced Statistics</MainHeading>
+			<SubHeading>
+				Track how your links are performing across the web with <br />
+				our advances statistics dashboard
+			</SubHeading>
+			<StatsWrapper>
+				<Line />
+				<StatsBox>
+					<ImageWrapper>
+						<img src='/images/icon-brand-recognition.svg' alt='' />
+					</ImageWrapper>
+					<h4>Brand Recognition</h4>
+
+					<p>
+						Boost your brand recognition with each click. Generic links don't
+						mean a thing. Branded links help instil confidence in your content.
+					</p>
+				</StatsBox>
+				<StatsBox id='second'>
+					<ImageWrapper>
+						<img src='/images/icon-detailed-records.svg' alt='' />
+					</ImageWrapper>
+					<h4>Detailed Records</h4>
+					<p>
+						Gain insights into who is clicking your links. Knowing when and
+						where people engage with your content helps inform better decisions.
+					</p>
+				</StatsBox>
+
+				<StatsBox id='third'>
+					<ImageWrapper>
+						<img src='/images/icon-fully-customizable.svg' alt='' />
+					</ImageWrapper>
+					<h4>Fully Customizable</h4>
+					<p>
+						Improve brand awareness and content discoverability through
+						customizable links, supercharging audience engagement.
+					</p>
+				</StatsBox>
+			</StatsWrapper>
+		</StatisticsWrapper>
+	);
+};
+
+export default Statistics;

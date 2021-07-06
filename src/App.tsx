@@ -4,6 +4,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import GetStarted from './components/GetStarted';
 import Navbar from './components/Navbar';
+import Statistics from './components/Statistics';
 
 export interface AppProps {}
 
@@ -16,6 +17,7 @@ const App: React.FC<AppProps> = () => {
 		<Wrapper>
 			<Navbar />
 			<About />
+			<Statistics />
 			<GetStarted />
 			<Footer />
 		</Wrapper>

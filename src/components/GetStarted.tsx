@@ -25,14 +25,14 @@ const GetStartedButton = styled.div`
 	width: fit-content;
 	background-color: #2acfcf;
 	color: white;
-	padding: 0.4rem 1rem;
+	padding: 0.4rem 1.5rem;
 	border-radius: 10rem;
 	cursor: pointer;
 `;
 
 const MainHeading = styled.h1`
 	color: white;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	margin: 0 auto;
 	line-height: 6rem;
 `;
