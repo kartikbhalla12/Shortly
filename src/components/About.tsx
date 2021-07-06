@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export interface AboutProps {}
 
 const AboutWrapper = styled.section`
-	padding: 5rem 0;
+	padding: 6rem 0;
 	background-image: url('/images/illustration-working.svg');
 	background-repeat: no-repeat;
 	background-position: center right -8rem;

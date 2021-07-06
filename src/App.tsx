@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import About from './components/About';
+import Footer from './components/Footer';
+import GetStarted from './components/GetStarted';
 import Navbar from './components/Navbar';
 
 export interface AppProps {}
@@ -14,6 +16,8 @@ const App: React.FC<AppProps> = () => {
 		<Wrapper>
 			<Navbar />
 			<About />
+			<GetStarted />
+			<Footer />
 		</Wrapper>
 	);
 };
