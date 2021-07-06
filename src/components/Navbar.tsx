@@ -7,7 +7,9 @@ const Nav = styled.section`
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 0;
+	font-weight: 600;
 	font-size: 0.9rem;
+	margin: 0 5rem;
 `;
 
 const LoginParent = styled.div`
