@@ -77,7 +77,7 @@ const Input = styled.input`
 	&:focus,
 	&:active,
 	&:focus-visible {
-		border: 0;
+		border: 2px solid transparent;
 		box-shadow: 0;
 		outline: 0 !important;
 	}
@@ -117,6 +117,7 @@ const UrlShortener: React.FC<UrlShortenerProps> = () => {
 	const [previousURLs, setPreviousURLs] = React.useState<
 		{ originalURL: string; shortURL: string }[]
 	>([]);
+	const shortenedURLRef = React.useRef<HTMLDivElement>(null);
 
 	const validateURL = (url: string) => {
 		if (!url) return 'Please add a link';
@@ -143,6 +144,12 @@ const UrlShortener: React.FC<UrlShortenerProps> = () => {
 				]);
 				setLoading(false);
 				setUrl('');
+				if (shortenedURLRef.current)
+					shortenedURLRef.current.scrollIntoView({
+						behavior: 'smooth',
+						block: 'nearest',
+						// inline: 'nearest',
+					});
 			} catch (ex: any) {
 				setError('URL not supported!');
 				setLoading(false);
@@ -188,9 +195,11 @@ const UrlShortener: React.FC<UrlShortenerProps> = () => {
 					</ErrorContainer>
 				</InnerContainer>
 			</InputWrapper>
-			{previousURLs.map((url, key) => (
-				<PreviousURLs key={key} previousUrls={url} />
-			))}
+			<div ref={shortenedURLRef}>
+				{previousURLs.map((url, key) => (
+					<PreviousURLs key={key} previousUrls={url} />
+				))}
+			</div>
 		</UrlShortenerWrapper>
 	);
 };
