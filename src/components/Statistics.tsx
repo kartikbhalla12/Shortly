@@ -17,6 +17,10 @@ const MainHeading = styled.h1`
 	color: #3b3054;
 	font-size: 2.5rem;
 	margin-bottom: 0.5rem;
+
+	@media (max-width: 700px) {
+		font-size: 2rem;
+	}
 `;
 
 const SubHeading = styled.h4`
@@ -24,6 +28,10 @@ const SubHeading = styled.h4`
 	font-size: 1.2rem;
 	font-weight: 500;
 	margin-top: 0rem;
+
+	@media (max-width: 450px) {
+		font-size: 1rem;
+	}
 `;
 const StatsWrapper = styled.div`
 	position: relative;

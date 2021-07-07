@@ -9,8 +9,11 @@ const GetStartedWrapper = styled.section`
 	background-image: url('/images/bg-boost-desktop.svg');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100%;
-	/* background-size: 40rem; */
+	background-size: cover;
+
+	@media (max-width: 700px) {
+		background-image: url('/images/bg-boost-mobile.svg');
+	}
 `;
 
 const Content = styled.div`
@@ -19,6 +22,10 @@ const Content = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	@media (max-width: 700px) {
+		margin: 0 2rem;
+	}
 `;
 
 const GetStartedButton = styled.div`
@@ -28,6 +35,8 @@ const GetStartedButton = styled.div`
 	padding: 0.4rem 1.5rem;
 	border-radius: 10rem;
 	cursor: pointer;
+	margin-top: 1rem;
+
 	&:hover {
 		background-color: #9be3e2;
 	}
@@ -37,7 +46,15 @@ const MainHeading = styled.h1`
 	color: white;
 	font-size: 2.5rem;
 	margin: 0 auto;
-	line-height: 6rem;
+	text-align: center;
+
+	@media (max-width: 700px) {
+		font-size: 2rem;
+	}
+
+	@media (max-width: 450px) {
+		font-size: 1.5rem;
+	}
 `;
 
 const GetStarted: React.FC<GetStartedProps> = () => {
