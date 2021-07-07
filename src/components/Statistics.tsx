@@ -7,6 +7,10 @@ const StatisticsWrapper = styled.section`
 	padding: 6rem 5rem;
 	background-color: #eff0f6;
 	text-align: center;
+
+	@media (max-width: 700px) {
+		padding: 2rem;
+	}
 `;
 
 const MainHeading = styled.h1`
@@ -27,10 +31,15 @@ const StatsWrapper = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	margin-top: 6rem;
+
+	@media (max-width: 700px) {
+		flex-direction: column;
+	}
 `;
 
 const StatsBox = styled.div`
 	position: relative;
+
 	text-align: left;
 	background-color: white;
 	padding: 2rem;
@@ -40,12 +49,24 @@ const StatsBox = styled.div`
 	width: 18%;
 	height: fit-content;
 
+	@media (max-width: 700px) {
+		width: auto;
+		text-align: center;
+		margin: 0;
+	}
+
 	&#second {
 		margin-top: 3rem;
+		@media (max-width: 700px) {
+			margin-top: 6rem;
+		}
 	}
 
 	&#third {
 		margin-top: 6rem;
+		@media (max-width: 700px) {
+			margin-top: 6rem;
+		}
 	}
 
 	h4 {
@@ -75,6 +96,11 @@ const ImageWrapper = styled.div`
 	img {
 		width: 2.5rem;
 	}
+
+	@media (max-width: 700px) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
 `;
 
 const Line = styled.div`
@@ -83,6 +109,28 @@ const Line = styled.div`
 	width: 50%;
 	height: 0.5rem;
 	background-color: #2acfcf;
+
+	@media (max-width: 700px) {
+		width: 80vh;
+		top: 25rem;
+		left: 50%;
+		transform: translateX(-50%) rotate(90deg);
+	}
+
+	@media (max-width: 420px) {
+		width: 100vh;
+		top: 40rem;
+	}
+
+	@media (max-width: 280px) {
+		width: 150vh;
+		top: 50rem;
+	}
+
+	@media (max-width: 280px) {
+		width: 180vh;
+		top: 60rem;
+	}
 `;
 
 const Statistics: React.FC<StatisticsProps> = () => {
@@ -90,8 +138,8 @@ const Statistics: React.FC<StatisticsProps> = () => {
 		<StatisticsWrapper>
 			<MainHeading>Advanced Statistics</MainHeading>
 			<SubHeading>
-				Track how your links are performing across the web with <br />
-				our advances statistics dashboard
+				Track how your links are performing across the web with our advances
+				statistics dashboard
 			</SubHeading>
 			<StatsWrapper>
 				<Line />

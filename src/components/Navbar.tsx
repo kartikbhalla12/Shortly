@@ -9,7 +9,7 @@ const NavWrapper = styled.div`
 	font-weight: 600;
 
 	@media (max-width: 700px) {
-		margin: 0 1rem;
+		margin: 0 2rem;
 	}
 `;
 
@@ -19,9 +19,9 @@ const Nav = styled.section`
 
 	/* margin: 0 5rem; */
 
-	@media (max-width: 700px) {
+	/* @media (max-width: 700px) {
 		margin: 0 2rem;
-	}
+	} */
 `;
 
 const LeftParent = styled.div`
