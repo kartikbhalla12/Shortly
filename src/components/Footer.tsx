@@ -97,12 +97,15 @@ const FooterNavCategory = styled.div`
 	}
 
 	@media (max-width: 700px) {
-		margin: 1rem 0;
+		margin: 1.5rem 0;
 	}
 `;
 
 const CategoryHeader = styled.h4`
 	margin-top: 0;
+	@media (max-width: 700px) {
+		margin-bottom: 1rem;
+	}
 `;
 
 const CategoryName = styled.p`
@@ -112,6 +115,10 @@ const CategoryName = styled.p`
 
 	&:hover {
 		color: #2acfcf;
+	}
+
+	@media (max-width: 700px) {
+		margin: 0.3rem 0;
 	}
 `;
 

@@ -136,7 +136,7 @@ const Line = styled.div`
 	}
 
 	@media (max-width: 280px) {
-		width: 180vh;
+		width: 170vh;
 		top: 60rem;
 	}
 `;
