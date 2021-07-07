@@ -28,6 +28,9 @@ const GetStartedButton = styled.div`
 	padding: 0.4rem 1.5rem;
 	border-radius: 10rem;
 	cursor: pointer;
+	&:hover {
+		background-color: #9be3e2;
+	}
 `;
 
 const MainHeading = styled.h1`

@@ -33,6 +33,10 @@ const SignUpButton = styled.div`
 	padding: 0.4rem 1rem;
 	border-radius: 10rem;
 	cursor: pointer;
+
+	&:hover {
+		background-color: #9be3e2;
+	}
 `;
 
 const LeftParent = styled.div`

@@ -17,7 +17,7 @@ const Content = styled.div`
 `;
 
 const Logo = styled.div`
-	flex-basis: 35%;
+	/* flex-basis: 35%; */
 	font-size: 2.5rem;
 	font-weight: 800;
 
@@ -25,7 +25,7 @@ const Logo = styled.div`
 `;
 
 const IconWrapper = styled.div`
-	flex-basis: 35%;
+	/* flex-basis: 35%; */
 	display: flex;
 	flex-direction: row;
 	justify-content: right;
