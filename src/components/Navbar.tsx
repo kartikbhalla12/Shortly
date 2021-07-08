@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Button } from './common/styledComponents';
 
 export interface NavbarProps {}
 
@@ -88,17 +89,9 @@ const SignInButton = styled.div`
 	}
 `;
 
-const SignUpButton = styled.div`
-	background-color: #2acfcf;
-	color: white;
+const SignUpButton = styled(Button)`
 	padding: 0.4rem 1rem;
-	border-radius: 10rem;
-	cursor: pointer;
 	font-size: 1rem;
-
-	&:hover {
-		background-color: #9be3e2;
-	}
 
 	@media (max-width: 800px) {
 		font-size: 0.9rem;
@@ -125,6 +118,10 @@ const MenuWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	/* align-items: center; */
+
+	@media (min-width: 700px) {
+		display: none;
+	}
 
 	&.show {
 		transition: height 0.25s linear;
@@ -155,6 +152,9 @@ const HorizontalRow = styled.div`
 `;
 
 const MenuSignInButton = styled(SignInButton)`
+	&:hover {
+		color: white;
+	}
 	color: white;
 	margin: 1rem auto;
 	width: fit-content;

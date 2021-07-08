@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Button } from './common/styledComponents';
 
 export interface AboutProps {}
 
@@ -114,17 +115,9 @@ const SubHeading = styled.h3`
 	}
 `;
 
-const GetStartedButton = styled.div`
+const GetStartedButton = styled(Button)`
 	width: fit-content;
-	background-color: #2acfcf;
-	color: white;
 	padding: 0.8rem 2rem;
-	border-radius: 10rem;
-	cursor: pointer;
-
-	&:hover {
-		background-color: #9be3e2;
-	}
 
 	@media (max-width: 700px) {
 		margin: 0 auto;

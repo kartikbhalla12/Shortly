@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Button } from './styledComponents';
 
 export interface PreviousURLsProps {
 	previousUrls: {
@@ -36,7 +37,7 @@ const HorizontalRow = styled.div`
 	margin: 1rem -1rem;
 `;
 const OriginalUrl = styled.span`
-	width: 60%;
+	width: 45%;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
@@ -73,26 +74,16 @@ const ShortenUrl = styled.span`
 	}
 `;
 
-const CopyUrlButton = styled.div`
-	/* width: fit-content; */
+const CopyUrlButton = styled(Button)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #2acfcf;
-	color: white;
-	/* font-weight: 700; */
 	font-size: 1rem;
 	padding: 0.5rem 1.5rem;
 	border-radius: 6px;
-	cursor: pointer;
-	/* flex-basis: 15%; */
 	margin-left: 1rem;
-	cursor: pointer;
-	width: 4rem;
 
-	&:hover {
-		background-color: #9be3e2;
-	}
+	width: 4rem;
 
 	&.copied {
 		background-color: #3a3053;

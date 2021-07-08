@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 import BeatLoader from 'react-spinners/BeatLoader';
 import validUrl from 'valid-url';
 import PreviousURLs from './common/PreviousURLs';
+import { Button } from './common/styledComponents';
 
 export interface UrlShortenerProps {}
 
@@ -102,24 +103,17 @@ const Input = styled.input`
 	}
 `;
 
-const ShortenButton = styled.div`
+const ShortenButton = styled(Button)`
 	flex-basis: 20%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #2acfcf;
-	color: white;
 	font-weight: 700;
 	font-size: 1.5rem;
 	padding: 0 0.5rem;
 	border-radius: 8px;
-	cursor: pointer;
 	text-align: center;
 	margin-left: 2rem;
-
-	&:hover {
-		background-color: #9be3e2;
-	}
 
 	@media (max-width: 1250px) {
 		font-size: 1rem;

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Button } from './common/styledComponents';
 
 export interface GetStartedProps {}
 
@@ -28,18 +29,10 @@ const Content = styled.div`
 	}
 `;
 
-const GetStartedButton = styled.div`
+const GetStartedButton = styled(Button)`
 	width: fit-content;
-	background-color: #2acfcf;
-	color: white;
 	padding: 0.4rem 1.5rem;
-	border-radius: 10rem;
-	cursor: pointer;
 	margin-top: 1rem;
-
-	&:hover {
-		background-color: #9be3e2;
-	}
 `;
 
 const MainHeading = styled.h1`

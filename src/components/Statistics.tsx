@@ -8,7 +8,7 @@ const StatisticsWrapper = styled.section`
 	background-color: #eff0f6;
 	text-align: center;
 
-	@media (max-width: 700px) {
+	@media (max-width: 1000px) {
 		padding: 2rem;
 	}
 `;
@@ -18,7 +18,7 @@ const MainHeading = styled.h1`
 	font-size: 2.5rem;
 	margin-bottom: 0.5rem;
 
-	@media (max-width: 700px) {
+	@media (max-width: 1000px) {
 		font-size: 2rem;
 	}
 `;
@@ -40,7 +40,7 @@ const StatsWrapper = styled.div`
 	justify-content: center;
 	margin-top: 6rem;
 
-	@media (max-width: 700px) {
+	@media (max-width: 1000px) {
 		flex-direction: column;
 	}
 `;
@@ -54,10 +54,11 @@ const StatsBox = styled.div`
 	border-radius: 5px;
 	margin: 0 1rem;
 	box-shadow: 0 1px 30px rgba(0, 0, 0, 0.12);
-	width: 18%;
+	/* width: 18%; */
 	height: fit-content;
+	min-width: 200px;
 
-	@media (max-width: 700px) {
+	@media (max-width: 1000px) {
 		width: auto;
 		text-align: center;
 		margin: 0;
@@ -65,14 +66,14 @@ const StatsBox = styled.div`
 
 	&#second {
 		margin-top: 3rem;
-		@media (max-width: 700px) {
+		@media (max-width: 1000px) {
 			margin-top: 6rem;
 		}
 	}
 
 	&#third {
 		margin-top: 6rem;
-		@media (max-width: 700px) {
+		@media (max-width: 1000px) {
 			margin-top: 6rem;
 		}
 	}
@@ -105,7 +106,7 @@ const ImageWrapper = styled.div`
 		width: 2.5rem;
 	}
 
-	@media (max-width: 700px) {
+	@media (max-width: 1000px) {
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -118,7 +119,7 @@ const Line = styled.div`
 	height: 0.5rem;
 	background-color: #2acfcf;
 
-	@media (max-width: 700px) {
+	@media (max-width: 1000px) {
 		width: 80vh;
 		top: 25rem;
 		left: 50%;
