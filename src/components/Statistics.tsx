@@ -57,8 +57,10 @@ const StatsBox = styled.div`
 	/* width: 18%; */
 	height: fit-content;
 	min-width: 200px;
+	max-width: 300px;
 
 	@media (max-width: 1000px) {
+		max-width: none;
 		width: auto;
 		text-align: center;
 		margin: 0;
@@ -120,18 +122,24 @@ const Line = styled.div`
 	background-color: #2acfcf;
 
 	@media (max-width: 1000px) {
-		width: 80vh;
-		top: 25rem;
+		/* width: 80vh; */
+		width: 45rem;
+		top: 30rem;
 		left: 50%;
 		transform: translateX(-50%) rotate(90deg);
 	}
 
-	@media (max-width: 420px) {
-		width: 100vh;
-		top: 40rem;
+	@media (max-width: 500px) {
+		width: 50rem;
+		top: 30rem;
 	}
 
-	@media (max-width: 280px) {
+	@media (max-width: 350px) {
+		width: 60rem;
+		top: 50rem;
+	}
+
+	/* @media (max-width: 280px) {
 		width: 150vh;
 		top: 50rem;
 	}
@@ -139,7 +147,7 @@ const Line = styled.div`
 	@media (max-width: 280px) {
 		width: 170vh;
 		top: 60rem;
-	}
+	} */
 `;
 
 const Statistics: React.FC<StatisticsProps> = () => {
