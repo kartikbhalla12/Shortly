@@ -52,7 +52,7 @@ const Category = styled.div`
 	font-size: 1rem;
 	cursor: pointer;
 
-	&:hover {
+	&:active {
 		color: #424242;
 	}
 
@@ -79,7 +79,7 @@ const SignInButton = styled.div`
 	border-radius: 1rem;
 	margin-right: 1rem;
 	cursor: pointer;
-	&:hover {
+	&:active {
 		color: #424242;
 	}
 
@@ -109,7 +109,7 @@ const MenuIcon = styled.img`
 `;
 
 const MenuWrapper = styled.div`
-	margin: 1rem;
+	margin: 1rem 0;
 	height: 0px;
 	background-color: #3a3053;
 	border-radius: 8px;
@@ -142,8 +142,8 @@ const MenuCategory = styled(Category)`
 	width: fit-content;
 	font-size: 1rem;
 
-	&:hover {
-		color: white;
+	&:active {
+		color: #2acfcf;
 	}
 `;
 const HorizontalRow = styled.div`
@@ -152,8 +152,8 @@ const HorizontalRow = styled.div`
 `;
 
 const MenuSignInButton = styled(SignInButton)`
-	&:hover {
-		color: white;
+	&:active {
+		color: #2acfcf;
 	}
 	color: white;
 	margin: 1rem auto;
