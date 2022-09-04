@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
+
 import { Button } from './common/styledComponents';
+import scrollToShortener from './utils/scrollToShortener';
 
 export interface GetStartedProps {}
 
@@ -56,7 +58,9 @@ const GetStarted: React.FC<GetStartedProps> = () => {
 			<Content>
 				<MainHeading>Boost your links today</MainHeading>
 
-				<GetStartedButton>Get Started</GetStartedButton>
+				<GetStartedButton onClick={scrollToShortener}>
+					Get Started
+				</GetStartedButton>
 			</Content>
 		</GetStartedWrapper>
 	);

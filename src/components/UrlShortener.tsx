@@ -164,12 +164,23 @@ const UrlShortener: React.FC<UrlShortenerProps> = () => {
 		} else {
 			setError('');
 			try {
-				const { data } = await axios.get(
-					`https://api.shrtco.de/v2/shorten?url=${url}`
+				const { data } = await axios.post(
+					'https://api.short.io/links/public',
+					{
+						domain: 'link.kartikbhalla.dev',
+						originalURL: url,
+					},
+					{
+						headers: {
+							accept: 'application/json',
+							'Content-Type': 'application/json',
+							authorization: 'pk_KkNpscERGzBXlPmH',
+						},
+					}
 				);
 				setPreviousURLs([
 					...previousURLs,
-					{ originalURL: url, shortURL: data.result.full_short_link },
+					{ originalURL: url, shortURL: data.shortURL },
 				]);
 				setLoading(false);
 				setUrl('');
@@ -187,7 +198,7 @@ const UrlShortener: React.FC<UrlShortenerProps> = () => {
 	};
 
 	return (
-		<UrlShortenerWrapper>
+		<UrlShortenerWrapper id='urlShortener'>
 			<InputWrapper>
 				<InputContainer>
 					<Input
@@ -197,7 +208,7 @@ const UrlShortener: React.FC<UrlShortenerProps> = () => {
 						onChange={e => setUrl(e.target.value)}
 						className={`${error ? 'error' : ''}`}
 						onKeyDown={e => {
-							if (e.key == 'Enter') {
+							if (e.key === 'Enter') {
 								if (!loading) getShortUrl(url);
 							}
 						}}

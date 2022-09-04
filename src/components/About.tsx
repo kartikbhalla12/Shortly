@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
+
 import { Button } from './common/styledComponents';
+import scrollToShortener from './utils/scrollToShortener';
 
 export interface AboutProps {}
 
@@ -134,7 +136,9 @@ const About: React.FC<AboutProps> = () => {
 					Build your own brand's recognition and get detailed insights on how
 					your links are performing
 				</SubHeading>
-				<GetStartedButton>Get Started</GetStartedButton>
+				<GetStartedButton onClick={scrollToShortener}>
+					Get Started
+				</GetStartedButton>
 			</Content>
 			<ImageWrapper>
 				<BrandImage src='/images/illustration-working.svg' />
