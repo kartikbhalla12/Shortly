@@ -131,11 +131,15 @@ const CategoryName = styled.p`
 	}
 `;
 
+const LogoLink = styled.a`
+	color: white ;
+	text-decoration: none;
+`; 
 const Footer: React.FC<FooterProps> = () => {
 	return (
 		<FooterWrapper>
 			<Content>
-				<Logo>Shortly</Logo>
+				<Logo><LogoLink href='/'>Shortly</LogoLink ></Logo>
 				<FooterNav>
 					<FooterNavCategory>
 						<CategoryHeader>Features</CategoryHeader>
