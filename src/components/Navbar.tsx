@@ -165,6 +165,14 @@ const MenuSignUpButton = styled(SignUpButton)`
 	padding: 0.8rem 2rem;
 `;
 
+const MenuLink = styled.a`
+	color: #939398;
+	text-decoration: none;
+	@media (max-width: 700px) {
+		color: white;
+	}
+`;
+
 const LogoLink = styled.a`
 	color: black;
 	text-decoration: none;
@@ -178,6 +186,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 				<LeftParent>
 					<Logo><LogoLink href='/'>Shortly</LogoLink></Logo>
 					<CategoryParent>
+						<Category><MenuLink href='https://www.kartikbhalla.dev'>Go Back to Kartik's Portfolio</MenuLink></Category>
 						<Category>Features</Category>
 						<Category>Pricing</Category>
 						<Category>Resources</Category>
@@ -196,6 +205,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 			</Nav>
 			<MenuWrapper className={showMenu ? 'show' : ''}>
 				<Menu>
+					<MenuCategory><MenuLink href='https://www.kartikbhalla.dev'>Go Back to Kartik's Portfolio</MenuLink></MenuCategory>
 					<MenuCategory>Features</MenuCategory>
 					<MenuCategory>Pricing</MenuCategory>
 					<MenuCategory>Resources</MenuCategory>
