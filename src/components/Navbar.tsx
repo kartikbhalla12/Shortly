@@ -165,13 +165,18 @@ const MenuSignUpButton = styled(SignUpButton)`
 	padding: 0.8rem 2rem;
 `;
 
+const LogoLink = styled.a`
+	color: black;
+	text-decoration: none;
+`;
+
 const Navbar: React.FC<NavbarProps> = () => {
 	const [showMenu, setShowMenu] = React.useState(false);
 	return (
 		<NavWrapper>
 			<Nav>
 				<LeftParent>
-					<Logo>Shortly</Logo>
+					<Logo><LogoLink href='/'>Shortly</LogoLink></Logo>
 					<CategoryParent>
 						<Category>Features</Category>
 						<Category>Pricing</Category>
