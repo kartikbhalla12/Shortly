@@ -55,7 +55,7 @@ const Category = styled.div`
 	&:active {
 		color: #424242;
 	}
-
+	
 	@media (max-width: 800px) {
 		font-size: 0.9rem;
 		margin: 0 0.6rem;
@@ -125,7 +125,7 @@ const MenuWrapper = styled.div`
 
 	&.show {
 		transition: height 0.25s linear;
-		height: 22rem;
+		height: 23rem;
 	}
 `;
 
@@ -168,6 +168,7 @@ const MenuSignUpButton = styled(SignUpButton)`
 const MenuLink = styled.a`
 	color: #939398;
 	text-decoration: none;
+
 	@media (max-width: 700px) {
 		color: white;
 	}
